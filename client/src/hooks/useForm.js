@@ -13,7 +13,7 @@ export const useForm = (initalValue) => {
                 });
       };
 
-
+      
     return ([value, handleChanges]) // this will become the state controllers in CheckoutForm.js
 
 }

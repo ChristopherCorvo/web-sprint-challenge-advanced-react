@@ -30,15 +30,41 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
-Answer: Test
+  Answer: 
+  
+  One of the big differences between functional components and class components is that there is 
+  some additional boiler plate. A class based component if it is utilizing state will have a constructor() and a super(). The constructor function is creating a new instance of the React Component Object. Props will be passed through the constructor function and super function. You will also need to utilize a render function to render your dom elements.
+
+  Another part of building stateful class components is that you need to implement reacts lifecycle
+  funtions inorder to handle mounting, updating and the possible removal of components. In functional components we use useEffect as a catch all for the various lifecycle functions that are part of stateful class components. 
 
 2. Describe the different phases of the component lifecycle.
 
-3. Demonstrate an understanding of class component lifecycle methods.
+  Answer:
+  
+  There are three phases to the component lifecyle:
+  
+  1) Mounting: In this phase the component is mounted or innitially rendered to the screen. This phase is tied to the lifecycle function componentDidMount()
+  
+  2) Updating: When ever state is changed or data is brought into the component via a request the component will take in the changes and will rerender. This phase is tied to the lifecycle function componentDidUpdate(). Axios requests would be made in this function for example.
+  
+  3) Unmounting: This is the final phase or death of the component. When a component is no longer needed we would use the lifecycle function componentWillUnmount() in oder to formulate business logic to remove the component from the DOM. 
+
+3. Demonstrate an understanding of class component lifecycle methods. 
+
+  Answer: see above answer
 
 4. Define stateful logic.
 
+  Answer: stateful logic just means business logic or code that uses state or in some way effects state. 
+
 5. Describe how to test a React component with React Testing Library.
+
+  Answer: We use the React Testing Library in this project specifically to implement a series of Integration Tests. Integration testing is a form of testing that tests multiple 'modules' as a group. So for example take a form. If we test the entirety of the form as a whole this could be classified as an Integration test.
+
+ Reacts testing library is added as a dependency when you create a react app. Just remember to import it to your testing files. Test files should be labled name.test.js. And to get the testing up and running open terminal and type 'npm test'. Now as you add tests to your test file their passing or failing results will show in the therminal. 
+
+ There are many in born function connected to this library like screen, render etc. Make sure you import these methods so that you have access to them in your projects. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
